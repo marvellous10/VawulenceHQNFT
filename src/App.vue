@@ -1,9 +1,10 @@
 <template>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <nav class="flex font-class">
     <div class="flex nav-wrapper">
-      <router-link to="/" class="flex logo-container">
+      <a href="/" class="flex logo-container">
         <img src="@/assets/images/Vawulence_logo.svg" alt="Logo">
-      </router-link>
+      </a>
       <div class="flex nav-router-links">
         <router-link to="/">Home</router-link>
         <router-link to="/airdrop">Airdrop</router-link>
@@ -11,10 +12,16 @@
         <router-link to="/about">About</router-link>
         <router-link to="/contact">Contact</router-link>
       </div>
-      <button class="flex whitelist-button">Whitelist</button>
+      <router-link to="/whitelist" class="flex whitelist-link">
+        Whitelist
+        <img class="nav-star-sticker" src="@/assets/images/sticker_star.svg" alt="">
+        <img class="nav-star-sticker pos-two" src="@/assets/images/sticker_star.svg" alt="">
+      </router-link>
     </div>
   </nav>
-  <router-view/>
+  <div class="app-wrapper">
+    <router-view/>
+  </div>
 </template>
 
 <style lang="scss">
@@ -23,11 +30,32 @@
   font-family: 'Poppins';
   font-style: normal;
 }
+.app-wrapper {
+  overflow-x: hidden;
+}
+.whitelist-link {
+  background: linear-gradient(to right, #09BC3B, #61E1FD);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  .nav-star-sticker {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 30px;
+    top: 10px;
+  }
+  .pos-two {
+    top: 25px;
+    right: 102.5px;
+  }
+}
 
 nav {
-  background: #252525;
+  background: #0D0D0D;
   align-items: center;
   height: 50px;
+  width: 100%;
   color: #FEFEFE;
   .logo-container {
     width: 40px;
