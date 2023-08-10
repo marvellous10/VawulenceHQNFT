@@ -1,11 +1,37 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useToast } from 'vue-toastification';
 
 export default defineComponent({
   name: 'HomeView',
+  setup() {
+    const toast = useToast();
+    return { toast }
+  },
   data() {
     return {
     }
+  },
+  methods: {
+    triggerToast() {
+      this.toast.info("Working on it", {
+        //position: 'top-center',
+        timeout: 3000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: true,
+        closeButton: "button",
+        icon: true,
+        rtl: false
+      });
+    }
+  },
+  created() {
+      document.title = 'VawulenceHQNFT'
   },
 })
 </script>
@@ -20,7 +46,7 @@ export default defineComponent({
           <span class="flex subheader-text-two">It's all about cruise</span>
         </div>
         <div class="flex wallet-button-container">
-          <button class="flex wallet-button">
+          <button @click="triggerToast" class="flex wallet-button">
             Connect Wallet
           </button>
         </div>
@@ -45,7 +71,7 @@ export default defineComponent({
               (an adulteration of word violence).
             </span>
           </div>
-          <button :click="whitepaperPage" class="flex sp-ft-btn">
+          <button @click="triggerToast" class="flex sp-ft-btn">
             <span class="gradient-text-color-right">Read Whitepaper</span>
             <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.svg">
           </button>
@@ -107,7 +133,7 @@ export default defineComponent({
           </div>
         </div>
         <div class="flex btn-wrapper">
-          <button class="flex sp-ft-btn">
+          <button @click="triggerToast" class="flex sp-ft-btn">
             <span class="gradient-text-color-right">Join Airdrop</span>
             <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.svg">
           </button>
@@ -211,7 +237,7 @@ export default defineComponent({
           </div>
         </div>
         <div class="flex whitepaper-button-wrapper">
-          <button :click="whitepaperPage" class="flex">
+          <button @click="triggerToast" class="flex">
             <span class="gradient-text-color-right">Read Whitepaper</span>
             <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.svg">
           </button>
@@ -221,10 +247,10 @@ export default defineComponent({
       <div class="flex second-page-fifth-elem">
         <div class="img-nf-con">
           <div class="img-nf-1">
-            <img src="" alt="">
+            <img class="img-nf-1-img" src="@/assets/images/nft_folder/Cupace_eleven.png">
           </div>
           <div class="img-nf-2">
-            <img src="" alt="">
+            <img class="img-nf-2-img" src="@/assets/images/nft_folder/Cupace_twelve.png">
           </div>
         </div>
         <div class="grid sp-fe-txt">
@@ -275,31 +301,31 @@ export default defineComponent({
         </div>
         <div class="grid img-nc-con">
           <div class="flex img-nc-1">
-            <div class="img-nc-1-1-con">
-              <img class="img-nc-1-1" src="">
+            <div>
+              <img src="@/assets/images/nft_folder/Cupace_eight.png">
             </div>
-            <div class="img-nc-1-2-con">
-              <img class="img-nc-1-2" src="">
+            <div>
+              <img src="@/assets/images/nft_folder/Cupace_seven.png">
             </div>
-            <div class="img-nc-1-3-con">
-              <img class="img-nc-1-3" src="">
+            <div>
+              <img src="@/assets/images/nft_folder/Cupace_nine.png">
             </div>
-            <div class="img-nc-1-4-con">
-              <img class="img-nc-1-4" src="">
+            <div>
+              <img src="@/assets/images/nft_folder/Cupace_ten.png">
             </div>
           </div>
           <div class="flex img-nc-2">
-            <div class="img-nc-2-1-con">
-              <img class="img-nc-2-1" src="">
+            <div>
+              <img src="@/assets/images/nft_folder/Cupace_two.png">
             </div>
-            <div class="img-nc-2-2-con">
-              <img class="img-nc-2-2" src="">
+            <div>
+              <img src="@/assets/images/nft_folder/Cupace_three.png">
             </div>
             <div class="img-nc-2-3-con">
-              <img class="img-nc-2-3" src="">
+              <img src="@/assets/images/nft_folder/Cupace_one.png">
             </div>
             <div class="img-nc-2-4-con">
-              <img class="img-nc-2-4" src="">
+              <img src="@/assets/images/nft_folder/Cupace_four.png">
             </div>
           </div>
         </div>
@@ -314,20 +340,34 @@ export default defineComponent({
         </div>
         <div class="flex team-container">
           <div class="grid tm-container">
-            <div class="tm"></div>
-            <label class="tm-label gradient-text-color-right">VawulenceHQNFT</label>
+            <div class="tm">
+              <img src="@/assets/images/team_folder/Albert.jpg">
+            </div>
+            <label class="tm-label gradient-text-color-right">
+              <a href="https://twitter.com/Austinalbert99"  target="_blank" rel="noreferrer noopener">AustinAlbert99</a>
+            </label>
           </div>
           <div class="grid tm-container">
-            <div class="tm"></div>
-            <label class="tm-label gradient-text-color-right">VawulenceHQNFT</label>
+            <div class="tm">
+              <img src="@/assets/images/team_folder/over.jpg">
+            </div>
+            <label class="tm-label gradient-text-color-right">Over</label>
           </div>
           <div class="grid tm-container">
-            <div class="tm"></div>
-            <label class="tm-label gradient-text-color-right">VawulenceHQNFT</label>
+            <div class="tm">
+              <img src="@/assets/images/team_folder/crypto_guy.jpg">
+            </div>
+            <label class="tm-label gradient-text-color-right">
+              <a href="https://www.twitter.com/Crypto_Guy_Sol"  target="_blank" rel="noreferrer noopener">Crypto_Guy_Sol</a>
+            </label>
           </div>
           <div class="grid tm-container">
-            <div class="tm"></div>
-            <label class="tm-label gradient-text-color-right">VawulenceHQNFT</label>
+            <div class="tm">
+              <img src="@/assets/images/team_folder/Adeola.jpg">
+            </div>
+            <label class="tm-label gradient-text-color-right">
+              <a href="https://www.twitter.com/ololademiadeola"  target="_blank" rel="noreferrer noopener">Adeola -UIUX-</a>
+            </label>
           </div>
         </div>
       </div>
@@ -722,6 +762,13 @@ export default defineComponent({
           border-radius: 20px;
           width: 358px;
           height: 358px;
+          .img-nf-1-img {
+            display: flex;
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+          }
         }
         .img-nf-2 {
           position: absolute;
@@ -733,6 +780,13 @@ export default defineComponent({
           height: 358px;
           left: 235px;
           top: 2095px;
+          .img-nf-2-img {
+            display: flex;
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+          }
         }
       }
       .sp-fe-txt {
@@ -812,7 +866,15 @@ export default defineComponent({
             width: 182px;
             height: 182px;
             margin-right: 1.5rem;
+            border-radius: 10px;
             background: #FEFEFE;
+            img {
+              display: flex;
+              width: 100%;
+              height: 100%;
+              background-repeat: no-repeat;
+              border-radius: 10px;
+            }
           }
           div:nth-child {
             margin-right: 0;
@@ -826,6 +888,14 @@ export default defineComponent({
             height: 182px;
             margin-right: 1.5rem;
             background: #FEFEFE;
+            border-radius: 10px;
+            img {
+              display: flex;
+              width: 100%;
+              height: 100%;
+              background-repeat: no-repeat;
+              border-radius: 10px;
+            }
           }
           div:nth-child {
             margin-right: 0;
@@ -855,14 +925,22 @@ export default defineComponent({
         justify-content: center;
         margin-bottom: 2rem;
         .tm-container {
-          width: 182px;
+          width: 170px;
           height: 200px;
           margin-right: 2rem;
           text-align: center;
           .tm {
-            width: 182px;
+            width: 170px;
             height: 182px;
+            border-radius: 10px;
             background: #FEFEFE;
+            img {
+              display: flex;
+              width: 100%;
+              height: 100%;
+              background-repeat: no-repeat;
+              border-radius: 10px;
+            }
           }
           label {
             margin-top: 0.5rem;
@@ -1208,14 +1286,14 @@ export default defineComponent({
           display: grid;
           margin-top: 0;
           width: 80vw;
-          grid: repeat(2, 130px) / 150px 130px;
+          grid: repeat(2, 180px) / 150px 130px;
           margin: auto;
           .tm-container {
             width: 130px;
-            height: 120px;
+            height: 170px;
             text-align: center;
             .tm {
-              height: 100px;
+              height: 140px;
               width: 130px;
               margin-bottom: 0;
             }

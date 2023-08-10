@@ -1,3 +1,38 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useToast } from 'vue-toastification';
+
+export default defineComponent({
+  name: 'App',
+  setup() {
+    const toast = useToast();
+    return { toast }
+  },
+  methods: {
+    triggerToast() {
+      this.toast.info("Working on it", {
+        //position: 'top-center',
+        timeout: 3000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: true,
+        closeButton: "button",
+        icon: true,
+        rtl: false
+      }
+      );
+
+      this.$router.push('/')
+    }
+  }
+})
+</script>
+
+
 <template>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <nav class="flex font-class">
@@ -7,12 +42,11 @@
       </a>
       <div class="flex nav-router-links">
         <router-link to="/">Home</router-link>
-        <router-link to="/airdrop">Airdrop</router-link>
-        <router-link to="/roadmap">Roadmap</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/contact">Contact</router-link>
+        <router-link to="/airdrop" @click="triggerToast">Airdrop</router-link>
+        <router-link to="/about" @click="triggerToast">About</router-link>
+        <router-link to="/contact" @click="triggerToast">Contact</router-link>
       </div>
-      <router-link to="/whitelist" class="flex whitelist-link">
+      <router-link to="/whitelist" @click="triggerToast" class="flex whitelist-link">
         Whitelist
         <img class="nav-star-sticker" src="@/assets/images/sticker_star.svg" alt="">
         <img class="nav-star-sticker pos-two" src="@/assets/images/sticker_star.svg" alt="">
@@ -97,5 +131,23 @@ nav a.router-link-exact-active {
   border-image-slice: 1;
   border-image-source: linear-gradient(to right, #09BC3B, #61E1FD);
   //09BC3B, 61E1FD, (00C853, B2FF59)
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    div {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      justify-content: space-between;
+      .nav-router-links {
+        margin-right: 0;
+      }
+      .whitelist-link {
+        .nav-star-sticker {
+          display: none;
+        }
+      }
+    }
+  }
 }
 </style>
