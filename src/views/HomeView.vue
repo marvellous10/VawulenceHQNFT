@@ -1047,6 +1047,7 @@ export default defineComponent({
     .second-page {
       width: 100vw;
       overflow-x: hidden;
+      margin-top: -5rem;
       .second-page-first-elem {
         width: 100vw;
         margin-left: 0rem;

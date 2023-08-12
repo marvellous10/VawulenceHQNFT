@@ -8,6 +8,11 @@ export default defineComponent({
     const toast = useToast();
     return { toast }
   },
+  data() {
+    return {
+      navbar_expanded: false,
+    }
+  },
   methods: {
     triggerToast() {
       this.toast.info("Working on it", {
@@ -27,6 +32,14 @@ export default defineComponent({
       );
 
       this.$router.push('/')
+    },
+    expandNavbar() {
+      if (this.navbar_expanded == false) {
+        this.navbar_expanded = true
+      }
+      else {
+        this.navbar_expanded = false
+      }
     }
   }
 })
@@ -52,7 +65,24 @@ export default defineComponent({
         <img class="nav-star-sticker pos-two" src="@/assets/images/sticker_star.svg" alt="">
       </router-link>
     </div>
+    <div class="harmburger-menu">
+      <a href="/" class="flex logo-container">
+        <img src="@/assets/images/Vawulence_logo.svg" alt="Logo">
+      </a>
+      <button @click="expandNavbar">=</button>
+    </div>
   </nav>
+  <div class="mobile-nav-router-links" v-if="navbar_expanded == true">
+        <router-link class="router-link home" to="/">Home</router-link>
+        <router-link class="router-link" to="/airdrop" @click="triggerToast">Airdrop</router-link>
+        <router-link class="router-link" to="/about" @click="triggerToast">About</router-link>
+        <router-link class="router-link" to="/contact" @click="triggerToast">Contact</router-link>
+        <router-link to="/whitelist" @click="triggerToast" class="flex router-link whitelist-link">
+          Whitelist
+          <img class="nav-star-sticker" src="@/assets/images/sticker_star.svg" alt="">
+          <img class="nav-star-sticker pos-two" src="@/assets/images/sticker_star.svg" alt="">
+        </router-link>
+      </div>
   <div class="app-wrapper">
     <router-view/>
   </div>
@@ -126,6 +156,10 @@ nav {
   justify-content: space-between;
 }
 
+.harmburger-menu {
+  display: none;
+}
+
 nav a.router-link-exact-active {
   border-bottom: 2px solid;
   border-image-slice: 1;
@@ -135,17 +169,48 @@ nav a.router-link-exact-active {
 
 @media only screen and (max-width: 480px) {
   nav {
-    div {
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-      justify-content: space-between;
-      .nav-router-links {
-        margin-right: 0;
-      }
-      .whitelist-link {
-        .nav-star-sticker {
-          display: none;
-        }
+    .nav-wrapper {
+      display: none;
+    }
+  }
+  .harmburger-menu {
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      outline: 0;
+      border: 1px solid #FEFEFE;
+      border-radius: 5px;
+      width: 2rem;
+      height: 2rem;
+      font-size: large;
+      font-weight: bold;
+    }
+  }
+  .mobile-nav-router-links {
+    border-top: 1.5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #09BC3B, #61E1FD);
+    padding-right: 3rem;
+    padding-left: 3rem;
+    display: grid;
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    background: #0D0D0D;
+    color: #FEFEFE;
+    .home {
+      margin-top: 5px;
+    }
+    .router-link {
+      margin-bottom: 5px;
+    }
+    .whitelist-link {
+      img {
+        display: none;
       }
     }
   }
