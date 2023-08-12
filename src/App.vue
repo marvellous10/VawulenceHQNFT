@@ -41,7 +41,10 @@ export default defineComponent({
         this.navbar_expanded = false
       }
     }
-  }
+  },
+  created() {
+      document.title = 'VawulenceHQNFT'
+  },
 })
 </script>
 
