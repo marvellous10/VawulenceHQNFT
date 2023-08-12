@@ -191,6 +191,8 @@ nav a.router-link-exact-active {
     }
   }
   .mobile-nav-router-links {
+    font-family: 'Poppins';
+    font-style: normal;
     border-top: 1.5px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to right, #09BC3B, #61E1FD);

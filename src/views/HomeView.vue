@@ -1169,11 +1169,12 @@ export default defineComponent({
           width: 100vw;
           margin-left: 0;
           text-align: center;
+          justify-content: center;
           .phase-container {
             display: flex;
             margin-bottom: 1rem;
             width: 8rem;
-            margin-left: 9rem;
+            margin-left: 35%;
             justify-content: center;
             align-items: center;
           }
