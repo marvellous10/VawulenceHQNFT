@@ -56,7 +56,7 @@ export default defineComponent({
     <div class="font-class second-page">
       <div class="flex second-page-first-elem">
         <div class="flex second-page-img">
-          <img class="po-pic" src="@/assets/images/page_one_picture.svg">
+          <img class="po-pic" src="@/assets/images/page_one_picture.png">
         </div>
         <div class="second-page-first-text">
           <div class="grid sp-ft-text">
@@ -73,9 +73,9 @@ export default defineComponent({
           </div>
           <button @click="triggerToast" class="flex sp-ft-btn">
             <span class="gradient-text-color-right">Read Whitepaper</span>
-            <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.svg">
+            <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.png">
           </button>
-          <img src="@/assets/images/sticker_star.svg" class="star-sticker">
+          <img src="@/assets/images/sticker_star.png" class="star-sticker">
           <img src="@/assets/images/Ellipse_three.png" class="ellipse-three">
         </div>
       </div>
@@ -135,7 +135,7 @@ export default defineComponent({
         <div class="flex btn-wrapper">
           <button @click="triggerToast" class="flex sp-ft-btn">
             <span class="gradient-text-color-right">Join Airdrop</span>
-            <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.svg">
+            <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.png">
           </button>
         </div>
         <img class="asterisk" src="@/assets/images/Sticker_asterisk.svg">
@@ -144,7 +144,7 @@ export default defineComponent({
       <div class="second-page-fourth-elem">
         <div class="flex sp-ftt-text-wrapper">
           <span class="roadmap-text">Roadmap</span>
-          <img class=roadmap-arrow-one src="@/assets/images/Arrow_one.svg">
+          <img class=roadmap-arrow-one src="@/assets/images/Arrow_one.png">
         </div>
         <div class="flex phase-wrapper">
           <div class="phase-container pending-background margin-custom-2">
@@ -239,7 +239,7 @@ export default defineComponent({
         <div class="flex whitepaper-button-wrapper">
           <button @click="triggerToast" class="flex">
             <span class="gradient-text-color-right">Read Whitepaper</span>
-            <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.svg">
+            <img class="arrow-up-right-button" src="@/assets/images/arrow-up-right.png">
           </button>
         </div>
         <img class="ellipse-seven" src="@/assets/images/Ellipse_seven.png">
@@ -295,37 +295,37 @@ export default defineComponent({
       </div>
       <div class="second-page-seventh-elem">
         <div class="flex sp-sv-header-container">
-          <img src="@/assets/images/sticker_star.svg" class="star-nft-sticker">
+          <img src="@/assets/images/sticker_star.png" class="star-nft-sticker">
           <span class="sp-sv-header-txt"><span class="gradient-text-color-right">NFT</span> Collection</span>
-          <img src="@/assets/images/Arrow_one.svg" class="arrow-one-sticker">
+          <img src="@/assets/images/Arrow_one.png" class="arrow-one-sticker">
         </div>
         <div class="grid img-nc-con">
-          <div class="flex img-nc-1">
+          <div class="flex img-nc-1" loading="lazy">
             <div>
-              <img src="@/assets/images/nft_folder/Cupace_eight.png">
+              <img loading="lazy" src="@/assets/images/nft_folder/Cupace_eight.png">
             </div>
             <div>
-              <img src="@/assets/images/nft_folder/Cupace_seven.png">
+              <img loading="lazy" src="@/assets/images/nft_folder/Cupace_seven.png">
             </div>
             <div>
-              <img src="@/assets/images/nft_folder/Cupace_nine.png">
+              <img loading="lazy" src="@/assets/images/nft_folder/Cupace_nine.png">
             </div>
             <div>
-              <img src="@/assets/images/nft_folder/Cupace_ten.png">
+              <img loading="lazy" src="@/assets/images/nft_folder/Cupace_ten.png">
             </div>
           </div>
           <div class="flex img-nc-2">
             <div>
-              <img src="@/assets/images/nft_folder/Cupace_two.png">
+              <img loading="lazy" src="@/assets/images/nft_folder/Cupace_two.png">
             </div>
             <div>
-              <img src="@/assets/images/nft_folder/Cupace_three.png">
+              <img loading="lazy" src="@/assets/images/nft_folder/Cupace_three.png">
             </div>
             <div class="img-nc-2-3-con">
-              <img src="@/assets/images/nft_folder/Cupace_one.png">
+              <img loading="lazy" src="@/assets/images/nft_folder/Cupace_one.png">
             </div>
             <div class="img-nc-2-4-con">
-              <img src="@/assets/images/nft_folder/Cupace_four.png">
+              <img loading="lazy" src="@/assets/images/nft_folder/Cupace_four.png">
             </div>
           </div>
         </div>
@@ -341,7 +341,7 @@ export default defineComponent({
         <div class="flex team-container">
           <div class="grid tm-container">
             <div class="tm">
-              <img src="@/assets/images/team_folder/Albert.jpg">
+              <img loading="lazy" src="@/assets/images/team_folder/Albert.jpg">
             </div>
             <label class="tm-label gradient-text-color-right">
               <a href="https://twitter.com/Austinalbert99"  target="_blank" rel="noreferrer noopener">AustinAlbert99</a>
@@ -349,13 +349,13 @@ export default defineComponent({
           </div>
           <div class="grid tm-container">
             <div class="tm">
-              <img src="@/assets/images/team_folder/over.jpg">
+              <img loading="lazy" src="@/assets/images/team_folder/over.jpg">
             </div>
             <label class="tm-label gradient-text-color-right">Over</label>
           </div>
           <div class="grid tm-container">
             <div class="tm">
-              <img src="@/assets/images/team_folder/crypto_guy.jpg">
+              <img loading="lazy" src="@/assets/images/team_folder/crypto_guy.jpg">
             </div>
             <label class="tm-label gradient-text-color-right">
               <a href="https://www.twitter.com/Crypto_Guy_Sol"  target="_blank" rel="noreferrer noopener">Crypto_Guy_Sol</a>
@@ -363,7 +363,7 @@ export default defineComponent({
           </div>
           <div class="grid tm-container">
             <div class="tm">
-              <img src="@/assets/images/team_folder/Adeola.jpg">
+              <img loading="lazy" src="@/assets/images/team_folder/Adeola.jpg">
             </div>
             <label class="tm-label gradient-text-color-right">
               <a href="https://www.twitter.com/ololademiadeola"  target="_blank" rel="noreferrer noopener">Adeola -UIUX-</a>
@@ -413,7 +413,7 @@ export default defineComponent({
   width: 100vw;
   overflow-x: hidden;
   .first-page {
-    background-image: url(@/assets/images/Rectangle_background.svg);
+    background-image: url(@/assets/images/Rectangle_background.png);
     background-repeat: no-repeat;
     margin-top: 0;
     width: 100vw;

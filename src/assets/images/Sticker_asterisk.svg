@@ -1,9 +1,1 @@
-<svg width="96" height="95" viewBox="0 0 96 95" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M82.75 13.5L95.25 36L62.75 47.75L95.25 59.5L82.25 82.75L55.25 60.5L61 95H35L40.5 60.5L13.75 83.25L9.23872e-07 59.25L32.5 47.5L0.250001 36.25L13 13.25L40.75 35.25L35 0.499991H61.25L55.25 35.25L82.75 13.5Z" fill="url(#paint0_linear_15_37)"/>
-<defs>
-<linearGradient id="paint0_linear_15_37" x1="-17" y1="-90" x2="113" y2="285" gradientUnits="userSpaceOnUse">
-<stop stop-color="#E00A63"/>
-<stop offset="1" stop-color="#2970FD"/>
-</linearGradient>
-</defs>
-</svg>
+<svg width="96" height="95" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M82.75 13.5 95.25 36l-32.5 11.75 32.5 11.75-13 23.25-27-22.25L61 95H35l5.5-34.5-26.75 22.75L0 59.25 32.5 47.5.25 36.25l12.75-23 27.75 22L35 .5h26.25l-6 34.75 27.5-21.75Z" fill="url(#a)"/><defs><linearGradient id="a" x1="-17" y1="-90" x2="113" y2="285" gradientUnits="userSpaceOnUse"><stop stop-color="#E00A63"/><stop offset="1" stop-color="#2970FD"/></linearGradient></defs></svg>

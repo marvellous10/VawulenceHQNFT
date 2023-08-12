@@ -51,7 +51,7 @@ export default defineComponent({
   <nav class="flex font-class">
     <div class="flex nav-wrapper">
       <a href="/" class="flex logo-container">
-        <img src="@/assets/images/Vawulence_logo.svg" alt="Logo">
+        <img src="@/assets/images/Vawulence_logo.png" alt="Logo">
       </a>
       <div class="flex nav-router-links">
         <router-link to="/">Home</router-link>
@@ -61,13 +61,13 @@ export default defineComponent({
       </div>
       <router-link to="/whitelist" @click="triggerToast" class="flex whitelist-link">
         Whitelist
-        <img class="nav-star-sticker" src="@/assets/images/sticker_star.svg" alt="">
-        <img class="nav-star-sticker pos-two" src="@/assets/images/sticker_star.svg" alt="">
+        <img class="nav-star-sticker" src="@/assets/images/sticker_star.png" alt="">
+        <img class="nav-star-sticker pos-two" src="@/assets/images/sticker_star.png" alt="">
       </router-link>
     </div>
     <div class="harmburger-menu">
       <a href="/" class="flex logo-container">
-        <img src="@/assets/images/Vawulence_logo.svg" alt="Logo">
+        <img src="@/assets/images/Vawulence_logo.png" alt="Logo">
       </a>
       <button @click="expandNavbar">=</button>
     </div>
@@ -79,8 +79,6 @@ export default defineComponent({
         <router-link class="router-link" to="/contact" @click="triggerToast">Contact</router-link>
         <router-link to="/whitelist" @click="triggerToast" class="flex router-link whitelist-link">
           Whitelist
-          <img class="nav-star-sticker" src="@/assets/images/sticker_star.svg" alt="">
-          <img class="nav-star-sticker pos-two" src="@/assets/images/sticker_star.svg" alt="">
         </router-link>
       </div>
   <div class="app-wrapper">
@@ -209,11 +207,6 @@ nav a.router-link-exact-active {
     }
     .router-link {
       margin-bottom: 5px;
-    }
-    .whitelist-link {
-      img {
-        display: none;
-      }
     }
   }
 }
